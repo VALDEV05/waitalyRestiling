@@ -111,13 +111,13 @@ $font-default: "raleway";
 .vc_btn3-container {
     a,
     button {
-        background-color: unset!important;
-        color: $color-white!important;
-        padding: 0!important;
-        padding: 0!important;
-        background: unset!important;
-        border: unset!important;
-        color: white!important;
+        background-color: unset !important;
+        color: $color-white !important;
+        padding: 0 !important;
+        padding: 0 !important;
+        background: unset !important;
+        border: unset !important;
+        color: white !important;
     }
 }
 
@@ -166,7 +166,7 @@ body {
         }
         button,
         a {
-            color: $color-green-wai!important;
+            color: $color-green-wai !important;
         }
     }
     p {
@@ -321,6 +321,109 @@ body {
                                 p {
                                     color: $color-white;
                                 }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.division-wai {
+            padding: 64px 0;
+            .vc_column_container.vc_col-sm-12 {
+                .vc_column-inner {
+                    .vc_row.container-division {
+                        display: flex;
+                        gap: 16px;
+                        .card_custom {
+                            border-radius: 40px;
+                            overflow: hidden;
+                            min-height: 200px;
+                            .vc_column-inner {
+                                margin-bottom: 0;
+                                height: 100%;
+                                .wpb_wrapper {
+                                    margin-bottom: 0;
+                                    position: relative;
+                                    height: 100%;
+                                    * {
+                                        margin-bottom: 0;
+                                    }
+                                    .wpb_single_image {
+                                        position: absolute;
+                                        bottom: 0;
+                                        left: 0;
+                                        width: 150px;
+                                    }
+                                    .card_custom {
+                                        &-title {
+                                            position: absolute;
+                                            left: 50%;
+                                            top: 22px;
+                                            transform: translateX(-20px);
+                                            .wpb_wrapper {
+                                                h4 {
+                                                    color: $color-white;
+                                                    font-size: 22px;
+                                                    font-weight: 900;
+                                                    text-transform: unset;
+                                                }
+                                            }
+                                        }
+                                        &-text {
+                                            position: absolute;
+                                            left: 50%;
+                                            top: 60px;
+                                            transform: translateX(-20px);
+                                            .wpb_wrapper {
+                                                p {
+                                                    color: $color-white;
+                                                    font-size: 14px;
+                                                    line-height: 1.2;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .vc_btn3-container.btn-custom-wai {
+                                        position: absolute;
+                                        bottom: 25px;
+                                        left: 50%;
+                                        transform: translateX(-20px);
+                                        &-orange {
+                                            button.vc_general {
+                                                color: $color-orange!important;
+                                            }
+                                        }
+                                        &-blue {
+                                            button.vc_general {
+                                                color: $color-blue-light!important;
+                                            }
+                                        }
+                                        &-purple {
+                                            button.vc_general {
+                                                color: $color-purple!important;
+                                            }
+                                        }
+                                        button.vc_general {
+                                            background-color: $color-white!important;
+                                            border-radius: 26px;
+                                            padding: 4px 10px !important;
+                                            font-size: 12px;
+                                            font-weight: 600;
+                                            width: fit-content;
+                                            margin: 0 auto;
+                                            display: flex;
+                                        }
+                                    }
+                                }
+                            }
+                            &-orange {
+                                background-color: $color-orange;
+                            }
+                            &-blue-light {
+                                background-color: $color-blue-light;
+                            }
+                            &-purple {
+                                background-color: $color-purple;
                             }
                         }
                     }
