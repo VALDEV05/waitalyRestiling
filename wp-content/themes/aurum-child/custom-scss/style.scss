@@ -4,7 +4,7 @@
 ***
 *  SCSS TABLE OF CONTENTS
 *   
-*  1.0 - Variables
+*  1.0 - Variables & Components
 *  2.0 - Reset
 *  3.0 - Fonts
 *  4.0 - Globals
@@ -18,21 +18,21 @@
 
 
 /* ==========================================================================
-   1.0  Variables
+   1.0  Variables & Components
    ========================================================================== */
 
 
 /* colors */
 
 $color-grey-dark: #333333;
-$color-green-wai: #008D86;
-$color-green-lime: #C4F639;
-$color-grey-light:#E4E4E4;
+$color-green-wai: #008d86;
+$color-green-lime: #c4f639;
+$color-grey-light: #e4e4e4;
 $color-white: #fff;
 $color-green-dark: #002926;
-$color-blue-light: #5A93FE;
-$color-purple: #7933DB;
-$color-orange: #FF8501;
+$color-blue-light: #5a93fe;
+$color-purple: #7933db;
+$color-orange: #ff8501;
 
 /* /colors */
 
@@ -41,12 +41,53 @@ $color-orange: #FF8501;
 
 $font-default: "raleway";
 
+/* /font-family */
+
+@mixin btn-wai {
+    background-color: $color-green-wai;
+    color: $color-white;
+    border-radius: 26px;
+    padding: 8px 36px;
+    font-size: 14px;
+    font-weight: 800;
+    width: fit-content;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+
 /* ==========================================================================
     2.0 - Reset
    ========================================================================== */
 
 .page-container {
-    margin: 0px;
+    margin: 0px auto;
+}
+
+* {
+    &::before,
+    &::after {
+        display: none !important;
+        content: unset !important;
+    }
+}
+
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+    &>* {
+        width: unset;
+        max-width: unset;
+    }
+    .vc_col-sm {
+        &-4 {
+            width: 33.33333333%;
+        }
+        &-8 {
+            width: 66.66666667%;
+        }
+    }
 }
 
 
@@ -75,12 +116,98 @@ body {
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    a {
+        color: $color-white;
+        text-decoration: none;
+        &:hover {
+            color: unset;
+            text-decoration: none;
+        }
+    }
+    .btn-green-wai {
+        @include btn-wai();
+    }
 }
 
 
 /* ==========================================================================
     5.0 - Header
    ========================================================================== */
+
+body {
+    .site-header {
+        &-banner {
+            background-color: $color-green-wai;
+            color: $color-white;
+            font-size: 14px;
+            padding: 12px;
+            .container {
+                .row {
+                    .col {
+                        &.switcher-languages {
+                            display: flex;
+                            justify-content: flex-end;
+                        }
+                    }
+                }
+            }
+        }
+        .container {
+            .first-row {
+                align-items: center;
+                margin-top: 12px;
+                margin-bottom: 12px;
+                gap: 10px;
+                justify-content: flex-end;
+                .activator-area-riservata {
+                    width: fit-content;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+            .row {
+                &.site-header-row {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 16px 0;
+                    .container {
+                        &-logo {
+                            width: fit-content;
+                        }
+                        &-menu {
+                            width: fit-content;
+                            nav {
+                                ul {
+                                    display: flex;
+                                    gap: 16px;
+                                    li {
+                                        &.current_page_item {
+                                            a {
+                                                font-weight: 700;
+                                            }
+                                        }
+                                        a {
+                                            padding: 0;
+                                            text-transform: unset;
+                                            font-size: 16px;
+                                            &:hover {
+                                                color: $color-grey-dark;
+                                                text-decoration: unset;
+                                                background-color: unset;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 
 /* ==========================================================================
