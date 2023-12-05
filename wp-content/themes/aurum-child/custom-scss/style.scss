@@ -56,6 +56,21 @@ $font-default: "raleway";
     }
 }
 
+@mixin btn-wai_white {
+    background: $color-white;
+    color: $color-green-wai;
+    border-radius: 26px;
+    padding: 8px 36px;
+    font-size: 14px;
+    font-weight: 600;
+    width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
 
 /* ==========================================================================
     2.0 - Reset
@@ -87,6 +102,22 @@ $font-default: "raleway";
         &-8 {
             width: 66.66666667%;
         }
+        &-12 {
+            width: 100%;
+        }
+    }
+}
+
+.vc_btn3-container {
+    a,
+    button {
+        background-color: unset!important;
+        color: $color-white!important;
+        padding: 0!important;
+        padding: 0!important;
+        background: unset!important;
+        border: unset!important;
+        color: white!important;
     }
 }
 
@@ -108,6 +139,7 @@ $font-default: "raleway";
 body {
     * {
         font-family: $font-default;
+        margin-bottom: 0;
     }
     font-family: $font-default;
     background-color: $color-white;
@@ -126,6 +158,34 @@ body {
     }
     .btn-green-wai {
         @include btn-wai();
+    }
+    .btn-white-wai {
+        @include btn-wai_white();
+        &.vc_btn3-inline {
+            display: flex;
+        }
+        button,
+        a {
+            color: $color-green-wai!important;
+        }
+    }
+    p {
+        font-style: normal;
+        font-weight: 600;
+        line-height: 25px;
+    }
+    .vc_column-inner {
+        padding: 0;
+    }
+    h1 {
+        font-size: 72px;
+        font-weight: 900;
+        text-transform: unset;
+    }
+    h2 {
+        font-size: 45px;
+        font-weight: 900;
+        text-transform: unset;
     }
 }
 
@@ -218,6 +278,57 @@ body {
 /* ==========================================================================
     7.0 - Home
    ========================================================================== */
+
+.page-container {
+    .vc_row {
+        &.home-hero {
+            margin: 64px 0;
+            .vc_column_container {
+                .vc_column-inner {
+                    .wpb_wrapper {
+                        .wpb_text_column.title-hero-home {
+                            h1 {
+                                &:first-child {
+                                    color: $color-green-wai;
+                                }
+                                &:last-child {
+                                    display: flex;
+                                    gap: 5px;
+                                    strong {
+                                        color: $color-green-wai;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.banner-wai {
+            background-color: $color-green-wai;
+            background-image: url(../../../../wp-content/uploads/2023/12/sfondo-line-banner.png);
+            padding: 64px 0;
+            .vc_column_container.vc_col-sm-12 {
+                .vc_row.wpb_row.vc_inner.vc_row-fluid {
+                    .container.vc_column_container.vc_col-sm-12 {
+                        left: 50%;
+                        transform: translateX(-50%);
+                        .vc_column-inner {
+                            .wpb_wrapper {
+                                h2 {
+                                    color: $color-white;
+                                }
+                                p {
+                                    color: $color-white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 
 /* ==========================================================================
