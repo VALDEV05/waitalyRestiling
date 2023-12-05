@@ -17,6 +17,18 @@ $header_type        = $header_type ? $header_type : 1;
 $has_secondary_menu = $header_type && has_nav_menu( 'secondary-menu' );
 
 ?>
+
+<header class="site-header site-header_custom">
+	<div class="site-header-banner"></div>
+	<div class="container">
+		<div class="row">
+			
+		</div>
+	</div>
+</header>
+
+
+
 <!-- <header class="site-header<?php echo " header-type-{$header_type}"; echo $header_sticky_menu ? " sticky": ''; ?>">
 
 	<?php get_template_part( 'tpls/header-top-bar' ); ?>

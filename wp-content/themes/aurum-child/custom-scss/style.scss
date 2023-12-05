@@ -21,28 +21,61 @@
    1.0  Variables
    ========================================================================== */
 
+
+/* colors */
+
 $color-grey-dark: #333333;
 $color-green-wai: #008D86;
 $color-green-lime: #C4F639;
 $color-grey-light:#E4E4E4;
+$color-white: #fff;
 $color-green-dark: #002926;
 $color-blue-light: #5A93FE;
 $color-purple: #7933DB;
 $color-orange: #FF8501;
 
+/* /colors */
+
+
+/* font-family */
+
+$font-default: "raleway";
+
 /* ==========================================================================
     2.0 - Reset
    ========================================================================== */
+
+.page-container {
+    margin: 0px;
+}
 
 
 /* ==========================================================================
     3.0 - Fonts
 ========================================================================== */
 
+@font-face {
+    font-family: "raleway";
+    src: url("../../../../webfontWAI/Raleway-VariableFont_wght.woff2") format("woff2"), url("../../../../webfontWAI/Raleway-VariableFont_wght.woff") format("woff");
+}
+
 
 /* ==========================================================================    
     4.0 - Globals
     ========================================================================== */
+
+body {
+    * {
+        font-family: $font-default;
+    }
+    font-family: $font-default;
+    background-color: $color-white;
+    color: $color-grey-dark;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
 
 
 /* ==========================================================================
