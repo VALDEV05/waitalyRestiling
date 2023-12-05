@@ -4,8 +4,12 @@
  *
  *	Laborator.co
  *	www.laborator.co
+ *
+ * 
+ * @author valeriocorda <v.corda@accentra.it>
+ * 
+ * 
  */
-
 $header_sticky_menu = get_data( 'header_sticky_menu' );
 $header_type        = get_data( 'header_type' );
 $header_type        = $header_type ? $header_type : 1;
@@ -13,7 +17,7 @@ $header_type        = $header_type ? $header_type : 1;
 $has_secondary_menu = $header_type && has_nav_menu( 'secondary-menu' );
 
 ?>
-<header class="site-header<?php echo " header-type-{$header_type}"; echo $header_sticky_menu ? " sticky": ''; ?>">
+<!-- <header class="site-header<?php echo " header-type-{$header_type}"; echo $header_sticky_menu ? " sticky": ''; ?>">
 
 	<?php get_template_part( 'tpls/header-top-bar' ); ?>
 
@@ -73,7 +77,7 @@ $has_secondary_menu = $header_type && has_nav_menu( 'secondary-menu' );
 	<?php endif; ?>
 
 </header>
-
+ -->
 <?php
 // Header Mobile
 get_template_part( 'tpls/header-mobile' ); 
