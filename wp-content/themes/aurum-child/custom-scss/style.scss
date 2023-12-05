@@ -71,6 +71,18 @@ $font-default: "raleway";
     }
 }
 
+@mixin btn-wai_green-lime {
+    background-color: $color-green-lime;
+    color: $color-grey-dark;
+    border-radius: 26px;
+    padding: 8px 36px;
+    font-size: 14px;
+    font-weight: 600;
+    width: fit-content;
+    margin: 0 auto;
+    display: flex;
+}
+
 
 /* ==========================================================================
     2.0 - Reset
@@ -98,6 +110,9 @@ $font-default: "raleway";
     .vc_col-sm {
         &-4 {
             width: 33.33333333%;
+        }
+        &-6 {
+            width: 50%;
         }
         &-8 {
             width: 66.66666667%;
@@ -167,6 +182,16 @@ body {
         button,
         a {
             color: $color-green-wai !important;
+        }
+    }
+    .btn-green-lime-wai {
+        @include btn-wai_green-lime();
+        &.vc_btn3-inline {
+            display: flex;
+        }
+        button,
+        a {
+            color: $color-grey-dark !important;
         }
     }
     p {
@@ -326,6 +351,18 @@ body {
                     }
                 }
             }
+            &-consulenza {
+                padding: 0;
+                padding-top: 32px!important;
+                .vc_column-inner {
+                    .wpb_wrapper {
+                        margin-bottom: 0;
+                        .wpb_single_image {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
         }
         &.division-wai {
             padding: 64px 0;
@@ -428,6 +465,91 @@ body {
                         }
                     }
                 }
+            }
+        }
+        &.section-pacchetti {
+            background-image: url('../../../../wp-content/uploads/2023/12/packsection-bg.jpg');
+            min-height: 500px;
+            background-position-y: bottom;
+            background-size: cover;
+            background-repeat: no-repeat;
+            .wpb_wrapper {
+                h2 {
+                    color: $color-green-wai;
+                }
+            }
+        }
+    }
+    .section-pacchetti-packs {
+        .container {
+            &:first-child {
+                margin-top: -150px;
+            }
+            &:last-child {
+                margin-top: 100px;
+            }
+        }
+        .card_second_custom {
+            .vc_column-inner {
+                padding-left: 45px;
+                padding-right: 45px;
+                &>.wpb_wrapper {
+                    border-radius: 40px;
+                    position: relative;
+                    min-height: 250px;
+                    padding: 40px;
+                    background-color: $color-green-wai;
+                    &>* {
+                        margin-bottom: 0;
+                    }
+                    .wpb_single_image {
+                        &:first-child {
+                            position: absolute;
+                            top: 0;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+                        &:last-child {
+                            position: absolute;
+                            right: 32px;
+                        }
+                    }
+                    .wpb_text_column {
+                        h3 {
+                            color: $color-green-lime;
+                            width: 70%;
+                            font-size: 21px;
+                            font-weight: 800;
+                            margin-top: 32px;
+                        }
+                        p {
+                            color: $color-white;
+                            font-size: 16px;
+                            margin-top: 14px;
+                            width: 70%;
+                        }
+                    }
+                }
+            }
+        }
+        .btn-green-lime-wai.vc_btn3-container {
+            background-color: $color-green-lime;
+            display: flex;
+            width: fit-content;
+            justify-content: center;
+            margin: 0 auto;
+            border-radius: 26px;
+            padding: 8px 36px;
+            font-size: 14px;
+            font-weight: 600;
+            width: fit-content;
+            margin: 0 auto;
+            display: flex;
+            .vc_general {
+                color: $color-grey-dark!important;
+            }
+            &:hover {
+                cursor: pointer;
             }
         }
     }
