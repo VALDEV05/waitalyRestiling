@@ -469,7 +469,7 @@ body {
         }
         &.section-pacchetti {
             background-image: url('../../../../wp-content/uploads/2023/12/packsection-bg.jpg');
-            min-height: 500px;
+            min-height: 600px;
             background-position-y: bottom;
             background-size: cover;
             background-repeat: no-repeat;
@@ -490,9 +490,8 @@ body {
             }
         }
         .card_second_custom {
-            .vc_column-inner {
-                padding-left: 45px;
-                padding-right: 45px;
+            &>.vc_column-inner {
+                max-width: 500px;
                 &>.wpb_wrapper {
                     border-radius: 40px;
                     position: relative;
