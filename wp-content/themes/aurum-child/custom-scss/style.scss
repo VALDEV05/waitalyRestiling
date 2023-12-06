@@ -28,6 +28,7 @@ $color-grey-dark: #333333;
 $color-green-wai: #008d86;
 $color-green-lime: #c4f639;
 $color-grey-light: #e4e4e4;
+$color-grey: #F2F2F2;
 $color-white: #fff;
 $color-green-dark: #002926;
 $color-blue-light: #5a93fe;
@@ -299,6 +300,93 @@ body {
     6.0 - Footer
    ========================================================================== */
 
+body {
+    footer.site-footer {
+        &_custom {
+            background-color: $color-grey-dark;
+            padding: 64px 0;
+            .container {
+                .row {
+                    .col-md-3 {
+                        width: 25%;
+                        .container-footer {
+                            &-left,
+                            &-right {
+                                &-dynamicy {
+                                    color: $color-white;
+                                    display: flex;
+                                    flex-direction: column;
+                                }
+                            }
+                            &-left {
+                                &-dynamicy {
+                                    .info {
+                                        &-aderente {
+                                            margin-top: 32px;
+                                            display: flex;
+                                            flex-direction: column;
+                                            img {
+                                                width: 100px;
+                                            }
+                                        }
+                                        &-cooperativa {
+                                            address {
+                                                font-weight: 300;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &-right {
+                                &-dynamicy {
+                                    a {
+                                        color: $color-green-wai;
+                                        font-weight: 300;
+                                    }
+                                }
+                            }
+                            &-menu {
+                                ul {
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 10px;
+                                    li {
+                                        a {
+                                            text-transform: uppercase;
+                                            &:hover {
+                                                color: $color-white;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &.container-logo-first {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            .container-logo-footer {
+                                svg {
+                                    width: 60%;
+                                    height: auto;
+                                }
+                            }
+                            .container-social {
+                                display: flex;
+                                gap: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .site-banner_custom-bottom {
+        padding: 16px;
+        background-color: $color-green-wai;
+    }
+}
+
 
 /* ==========================================================================
     7.0 - Home
@@ -333,6 +421,9 @@ body {
             background-color: $color-green-wai;
             background-image: url("../../../../wp-content/uploads/2023/12/sfondo-line-banner.png");
             padding: 64px 0;
+            &-first {
+                padding: 100px 0;
+            }
             .vc_column_container.vc_col-sm-12 {
                 .vc_row.wpb_row.vc_inner.vc_row-fluid {
                     .container.vc_column_container.vc_col-sm-12 {
@@ -346,6 +437,17 @@ body {
                                 p {
                                     color: $color-white;
                                 }
+                            }
+                        }
+                    }
+                }
+            }
+            .wpb_column.vc_column_container.vc_col-sm-12 {
+                .vc_column-inner {
+                    .wpb_wrapper {
+                        .wpb_text_column.wpb_content_element.container {
+                            .wpb_wrapper {
+                                color: $color-white;
                             }
                         }
                     }
@@ -479,76 +581,108 @@ body {
                 }
             }
         }
-    }
-    .section-pacchetti-packs {
-        .container {
-            &:first-child {
-                margin-top: -150px;
-            }
-            &:last-child {
-                margin-top: 100px;
-            }
+        &.row-partners {
+            margin: 64px 0 0;
+            padding: 64px 0;
         }
-        .card_second_custom {
-            &>.vc_column-inner {
-                max-width: 500px;
-                &>.wpb_wrapper {
-                    border-radius: 40px;
-                    position: relative;
-                    min-height: 250px;
-                    padding: 40px;
-                    background-color: $color-green-wai;
-                    &>* {
-                        margin-bottom: 0;
-                    }
-                    .wpb_single_image {
-                        &:first-child {
-                            position: absolute;
-                            top: 0;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
+    }
+    .vc_section {
+        &.section-pacchetti-packs {
+            .container {
+                &:first-child {
+                    margin-top: -150px;
+                }
+                &:last-child {
+                    margin-top: 100px;
+                }
+            }
+            .card_second_custom {
+                &>.vc_column-inner {
+                    max-width: 500px;
+                    margin: 0 auto;
+                    &>.wpb_wrapper {
+                        border-radius: 40px;
+                        position: relative;
+                        min-height: 250px;
+                        padding: 40px;
+                        background-color: $color-green-wai;
+                        &>* {
+                            margin-bottom: 0;
                         }
-                        &:last-child {
-                            position: absolute;
-                            right: 32px;
+                        .wpb_single_image {
+                            &:first-child {
+                                position: absolute;
+                                top: 0;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                            }
+                            &:last-child {
+                                position: absolute;
+                                right: 32px;
+                            }
                         }
-                    }
-                    .wpb_text_column {
-                        h3 {
-                            color: $color-green-lime;
-                            width: 70%;
-                            font-size: 21px;
-                            font-weight: 800;
-                            margin-top: 32px;
-                        }
-                        p {
-                            color: $color-white;
-                            font-size: 16px;
-                            margin-top: 14px;
-                            width: 70%;
+                        .wpb_text_column {
+                            h3 {
+                                color: $color-green-lime;
+                                width: 70%;
+                                font-size: 21px;
+                                font-weight: 800;
+                                margin-top: 32px;
+                            }
+                            p {
+                                color: $color-white;
+                                font-size: 16px;
+                                margin-top: 14px;
+                                width: 70%;
+                            }
                         }
                     }
                 }
             }
-        }
-        .btn-green-lime-wai.vc_btn3-container {
-            background-color: $color-green-lime;
-            display: flex;
-            width: fit-content;
-            justify-content: center;
-            margin: 0 auto;
-            border-radius: 26px;
-            padding: 8px 36px;
-            font-size: 14px;
-            font-weight: 600;
-            width: fit-content;
-            margin: 0 auto;
-            display: flex;
-            .vc_general {
-                color: $color-grey-dark!important;
+            .btn-green-lime-wai.vc_btn3-container {
+                background-color: $color-green-lime;
+                display: flex;
+                width: fit-content;
+                justify-content: center;
+                margin: 0 auto;
+                border-radius: 26px;
+                padding: 8px 36px;
+                font-size: 14px;
+                font-weight: 600;
+                width: fit-content;
+                margin: 0 auto;
+                display: flex;
+                .vc_general {
+                    color: $color-grey-dark!important;
+                }
+                &:hover {
+                    cursor: pointer;
+                }
             }
-            &:hover {
-                cursor: pointer;
+        }
+        &.section-news {
+            background-color: $color-grey;
+            .vc_grid-container>.vc_grid {
+                .vc_pageable-slide-wrapper {
+                    display: flex;
+                    justify-content: space-around;
+                    .vc_grid-item.vc_col-sm-4 {
+                        width: 28%;
+                        .vc_gitem-animated-block {
+                            .vc_gitem-zone-mini {
+                                display: none;
+                            }
+                        }
+                        .vc_gitem-zone-mini {
+                            p {
+                                display: -webkit-box;
+                                -webkit-line-clamp: 3;
+                                -webkit-box-orient: vertical;
+                                overflow: hidden;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
